@@ -30,6 +30,15 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes a name and a role (e.g., "Alice", "speaker")
 // - Returns a string in the format: "Name: Alice, Role: Speaker"
 
+
+function attendeeBadge(name, role) {
+  return `Name:, ${name}, Role: ${role}`;
+
+}
+
+let result = attendeeBadge("Alice", "Speaker");
+console.log(result);
+
 // Steps:
 // 1. Define the function with two parameters.
 // 2. Format the output string properly.
@@ -45,6 +54,16 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
 
+function totalCost(antendeeCount, costPerAttendee) {
+  let totalCost = antendeeCount * costPerAttendee;
+  if (antendeeCount > 100) { //Attendee
+      totalCost *= 0.9; // Discount
+  }
+  return totalCost;
+}
+
+console.log(totalCost(120, 25));
+
 // Steps:
 // 1. Multiply attendees by cost.
 // 2. Check if attendee count is over 100.
@@ -59,6 +78,15 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes an email string as input.
 // - Returns true if the email contains both "@" and "." characters.
 // - Returns false otherwise.
+
+function isValidEmail(email) {
+  return email.includes("@") === email.includes(".");
+}
+
+console.log(isValidEmail("joshsmith@test.com"));
+console.log(isValidEmail("joshsmith.com"));
+console.log(isValidEmail("joshsmith@com"));
+
 
 // Steps:
 // 1. Check if the string includes both "@" and ".".
